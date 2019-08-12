@@ -12,6 +12,7 @@ import {
 import { loginMutation } from "../graphql/mutations";
 import catchAsync from "../utils/catchAsync";
 import saveTokens from "../utils/saveTokens";
+import { wsLink } from "../graphql/client";
 
 class Login extends Component {
   state = {
@@ -48,6 +49,7 @@ class Login extends Component {
       form: { email: "", password: "" }
     });
     saveTokens(token, refreshToken);
+    wsLink.subscriptionClient.tryReconnect();
     history.push("/view-team");
   });
 
