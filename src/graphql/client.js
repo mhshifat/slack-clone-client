@@ -49,10 +49,11 @@ const httpLink = new HttpLink({
   uri: REACT_APP_API_URI || "http://localhost:5000/api"
 });
 
-const wsLink = new WebSocketLink({
+export const wsLink = new WebSocketLink({
   uri: REACT_APP_SUBSCRIPTION_URI || "ws://localhost:5000/subscription",
   options: {
     reconnect: true,
+    lazy: true,
     connectionParams: {
       token: localStorage.getItem("token"),
       refreshToken: localStorage.getItem("refreshToken")
