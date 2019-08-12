@@ -1,6 +1,6 @@
-## File Share App
+## Slack Clone
 
-This app is a file sharing app that lets u share a single or multiple files to a perticular person. Reciever will get an email with downloadable link which will let them to download the files.
+This app is a clone of the original slack messaging system.
 
 ### Demo Link
 
@@ -11,8 +11,7 @@ link: [https://graphql-slack-clone.netlify.com](https://graphql-slack-clone.netl
 * React
 * MongoDB
 * Node
-* Express
-* SendGrid
+* GraphQL
 
 ### Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
