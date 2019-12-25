@@ -76,5 +76,6 @@ const link = split(
 
 export default new ApolloClient({
   cache: new InMemoryCache(),
-  link
+  link,
+  connectToDevTools: true
 });
